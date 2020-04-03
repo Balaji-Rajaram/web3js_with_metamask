@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/img/avatar-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>web3.js with Metamask</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Bhai">
+    <link rel="stylesheet" href="assets/css/styles.css">
+   
+   
+</head>
+
+<body class="d-flex align-items-center" style="padding: 100px;padding-top: 50px;padding-right: 300px;padding-left: 300px;">
+    <div style="width: 700px;">
+        <div class="d-xl-flex justify-content-xl-start" style="padding: 5px;">
+            <!-- <img class="flex-xl-shrink-1" src="assets/img/11744586.png" style="height: 450px;margin-top: 40px;"> -->
+            <img src="assets/img/avatar-icon.png" style="margin-left: 100px;"></div>
+        <!-- Start: heading -->
+        <div class="d-md-flex justify-content-md-center" style="padding-top: 50px;">
+            <h1 style="font-weight: normal;font-family: 'Baloo Bhai', cursive;">web3.js with Metamask</h1>
+        </div>
+        <!-- End: heading -->
+        <!-- Start: line -->
+        <div class="d-flex d-md-flex justify-content-md-center" style="padding: 8px;">
+            <div style="height: 5px;background-color: #f8ec66;width: 110px;"></div>
+            <div style="height: 5px;background-color: #f48b76;width: 110px;margin-left: -20px;"></div>
+            <div style="height: 5px;background-color: #50bb78;width: 110px;margin-left: -20px;"></div>
+            <div style="height: 5px;background-color: #9d68ab;width: 110px;margin-left: -20px;"></div>
+            <div style="height: 5px;background-color: #10afd3;width: 110px;margin-left: -20px;"></div>
+            <div style="height: 5px;background-color: #657bbd;width: 110px;margin-left: -20px;"></div>
+        </div>
+        <!-- End: line -->
+
+        <!-- Start:check -->
+
+        <div style="margin-top: 60px;">
+            <h1 class="d-md-flex justify-content-md-start" style="font-size: 35px;font-family: 'Baloo Bhai', cursive;">checking web3</h1>
+            <div class="d-sm-flex d-xl-flex justify-content-sm-start justify-content-xl-start">
+                <p class="border rounded" style="font-family: 'Baloo Bhai', cursive;background-color: #df1cff;padding: 2px;padding-right: 10px;padding-left: 10px;">typeof web3</p>
+            </div>
+            <div  style="padding: 10px;padding-top: 0px;margin-top: 20px;background-color: rgba(247,247,247,0.94);" class="w3-code jsHigh notranslate">
+                
+<pre>
+    
+    if (typeof window.ethereum !== 'undefined') {
+        /*web3 is detected*/
+        console.log("web3 detected");    
+    }
+    else{
+      console.log("web3 is not detected");
+    }
+</pre>
+            </div>
+            <div class="d-flex d-xl-flex justify-content-end justify-content-xl-end" style="padding: 5px;margin-top: 20px;"><button class="btn btn-primary" type="button" style="padding: 3px;padding-right: 25px;padding-left: 25px;" onclick="check()">Test</button></div>
+            <!-- <div class="d-xl-flex" style="padding: 5px;margin-top: 20px;">
+                <p class="border rounded" style="font-family: 'Baloo Bhai', cursive;background-color: #10afd3;padding: 2px;padding-right: 10px;padding-left: 10px;">Console</p>
+            </div> -->
+            <div style="padding: 10px;">
+                <p class="border rounded" style="background-color: rgba(247,247,247,0.94);padding: 10px;" id="checkOp">Output</p>
+            </div>
+        </div>
+
+        <!-- End:check -->
+
+        
+        <!-- start:is metamask -->
+
+        <div style="margin-top: 60px;">
+            <h1 class="d-md-flex justify-content-md-start" style="font-size: 35px;font-family: 'Baloo Bhai', cursive;">Checking web3 is a Metamask</h1>
+            <div class="d-sm-flex d-xl-flex justify-content-sm-start justify-content-xl-start">
+                <p class="border rounded" style="font-family: 'Baloo Bhai', cursive;background-color: #df1cff;padding: 2px;padding-right: 10px;padding-left: 10px;">.isMetamask</p>
+            </div>
+            <div  style="padding: 10px;padding-top: 0px;margin-top: 20px;background-color: rgba(247,247,247,0.94);" class="w3-code jsHigh notranslate">
+                
+<pre>
+    
+    if (typeof window.ethereum !== 'undefined') {
+        /*return boolean*/
+        console.log(ethereum.isMetaMask);    
+    }
+    else{
+      console.log("web3 is not detected");
+    }
+</pre>
+            </div>
+            <div class="d-flex d-xl-flex justify-content-end justify-content-xl-end" style="padding: 5px;margin-top: 20px;"><button class="btn btn-primary" type="button" style="padding: 3px;padding-right: 25px;padding-left: 25px;" onclick="ismetamask()">Test</button></div>
+            <div style="padding: 10px;">
+                <p class="border rounded" style="background-color: rgba(247,247,247,0.94);padding: 10px;" id="isMetamaskOp">Output</p>
+            </div>
+        </div>
+
+        <!-- End: isMetamask -->
+
+        <!-- start: networkversion -->
+
+
+        <div style="margin-top: 60px;">
+            <h1 class="d-md-flex justify-content-md-start" style="font-size: 35px;font-family: 'Baloo Bhai', cursive;">Finding the ethereum network</h1>
+            <div class="d-sm-flex d-xl-flex justify-content-sm-start justify-content-xl-start">
+                <p class="border rounded" style="font-family: 'Baloo Bhai', cursive;background-color: #df1cff;padding: 2px;padding-right: 10px;padding-left: 10px;">ethereum.networkVersion</p>
+            </div>
+            <div  style="padding: 10px;padding-top: 0px;margin-top: 20px;background-color: rgba(247,247,247,0.94);" class="w3-code jsHigh notranslate">
+                
+<pre>
+    
+    if (typeof window.ethereum !== 'undefined') {
+        /* return the network version */
+        console.log(ethereum.networkVersion);        
+    }
+    else{
+        console.log("web3 not detected");
+    }
+</pre>
+            </div>
+            <div class="d-flex d-xl-flex justify-content-end justify-content-xl-end" style="padding: 5px;margin-top: 20px;"><button class="btn btn-primary" type="button" style="padding: 3px;padding-right: 25px;padding-left: 25px;" onclick="network()">Test</button></div>
+            <div style="padding: 10px;">
+                <p class="border rounded" style="background-color: rgba(247,247,247,0.94);padding: 10px;" id="networkOp">Output</p>
+            </div>
+            <div  style="padding: 10px;padding-top: 0px;margin-top: 20px;background-color: rgba(247,247,247,0.94);" class="w3-code jsHigh notranslate">
+
+<pre>
+
+    '1': Ethereum Main Network
+    '2': Morden Test network
+    '3': Ropsten Test Network
+    '4': Rinkeby Test Network
+    '5': Goerli Test Network
+    '42': Kovan Test Network
+</pre>
+            </div>
+        </div>
+
+        <!-- End: network version -->
+       
+
+
+        <!-- start: enable ethereum -->
+
+
+        <div style="margin-top: 60px;">
+            <h1 class="d-md-flex justify-content-md-start" style="font-size: 35px;font-family: 'Baloo Bhai', cursive;">Enable Metamask</h1>
+            <div class="d-sm-flex d-xl-flex justify-content-sm-start justify-content-xl-start">
+                <p class="border rounded" style="font-family: 'Baloo Bhai', cursive;background-color: #df1cff;padding: 2px;padding-right: 10px;padding-left: 10px;">.enable()</p>
+            </div>
+            <div  style="padding: 10px;padding-top: 0px;margin-top: 20px;background-color: rgba(247,247,247,0.94);" class="w3-code jsHigh notranslate">
+                
+<pre>
+    
+    if (typeof window.ethereum !== 'undefined') {
+        try{
+            ethereum.enable();
+            console.log("Metamask enabled");
+        }
+        catch(err){
+            console.log("error while enabeling Metamask");
+        }
+        
+    }
+    else{
+        console.log("web3 not detected");
+    }
+</pre>
+            </div>
+            <div class="d-flex d-xl-flex justify-content-end justify-content-xl-end" style="padding: 5px;margin-top: 20px;"><button class="btn btn-primary" type="button" style="padding: 3px;padding-right: 25px;padding-left: 25px;" onclick="enable()">Test</button></div>
+            <div style="padding: 10px;">
+                <p class="border rounded" style="background-color: rgba(247,247,247,0.94);padding: 10px;" id="enableOp">Output</p>
+            </div>
+        </div>
+
+        <!-- End:enable ethereum -->
+
+
+           <!-- start: getting account -->
+
+
+           <div style="margin-top: 60px;">
+            <h1 class="d-md-flex justify-content-md-start" style="font-size: 35px;font-family: 'Baloo Bhai', cursive;">Getting current account</h1>
+            <div class="d-sm-flex d-xl-flex justify-content-sm-start justify-content-xl-start">
+                <p class="border rounded" style="font-family: 'Baloo Bhai', cursive;background-color: #df1cff;padding: 2px;padding-right: 10px;padding-left: 10px;">accounts</p>
+            </div>
+            <div  style="padding: 10px;padding-top: 0px;margin-top: 20px;background-color: rgba(247,247,247,0.94);" class="w3-code jsHigh notranslate">
+                
+<pre>
+    
+    if (typeof window.ethereum !== 'undefined') {
+        try{
+            ethereum.enable()
+            .then(function (accounts) {
+                /* You now have an array of accounts!
+                 Currently only ever one*/
+                console.log(accounts);
+            })
+              .catch(function (error) {
+                /* Handle error. Likely the user rejected the login*/
+                console.error(error)
+            })
+        
+    }
+    else{
+        console.log("web3 not detected");
+    }
+</pre>
+            </div>
+            <div class="d-flex d-xl-flex justify-content-end justify-content-xl-end" style="padding: 5px;margin-top: 20px;"><button class="btn btn-primary" type="button" style="padding: 3px;padding-right: 25px;padding-left: 25px;" onclick="current_account()">Test</button></div>
+            <div style="padding: 10px;">
+                <p class="border rounded" style="background-color: rgba(247,247,247,0.94);padding: 10px;" id="current_accountOp">Output</p>
+            </div>
+        </div>
+
+        <!-- End:getting accocunt -->
+
+        
+        <!-- start: Account Balance-->
+
+
+           <div style="margin-top: 60px;">
+            <h1 class="d-md-flex justify-content-md-start" style="font-size: 35px;font-family: 'Baloo Bhai', cursive;">Getting current account balance</h1>
+            <div class="d-sm-flex d-xl-flex justify-content-sm-start justify-content-xl-start">
+                <p class="border rounded" style="font-family: 'Baloo Bhai', cursive;background-color: #df1cff;padding: 2px;padding-right: 10px;padding-left: 10px;">web3.eth.getBalance()</p>
+            </div>
+            <div  style="padding: 10px;padding-top: 0px;margin-top: 20px;background-color: rgba(247,247,247,0.94);" class="w3-code jsHigh notranslate">
+                
+<pre>
+    
+    if (typeof window.ethereum !== 'undefined') {
+        ethereum.enable()
+        const web3 = new Web3(ethereum)
+        /* Getting a address */
+        address=web3.eth.accounts[0];
+        web3.eth.getBalance(address, function(error, balance) {
+            /* converting wei to ether */
+            console.log(web3.fromWei(balance,'ether'));
+        });
+        
+    }
+    else{
+        console.log("web3 not detected");
+    }
+</pre>
+            </div>
+            <div class="d-flex d-xl-flex justify-content-end justify-content-xl-end" style="padding: 5px;margin-top: 20px;"><button class="btn btn-primary" type="button" style="padding: 3px;padding-right: 25px;padding-left: 25px;" onclick="get_balance()">Test</button></div>
+            <div style="padding: 10px;">
+                <p class="border rounded" style="background-color: rgba(247,247,247,0.94);padding: 10px;" id="get_balanceOp">Output</p>
+            </div>
+        </div>
+
+        <!-- End:Account Blaance -->
+
+        <!-- start: Signing Message-->
+
+
+        <div style="margin-top: 60px;">
+            <h1 class="d-md-flex justify-content-md-start" style="font-size: 35px;font-family: 'Baloo Bhai', cursive;">Signing the message</h1>
+            <div class="d-sm-flex d-xl-flex justify-content-sm-start justify-content-xl-start">
+                <p class="border rounded" style="font-family: 'Baloo Bhai', cursive;background-color: #df1cff;padding: 2px;padding-right: 10px;padding-left: 10px;">web3.eth.sign()</p>
+            </div>
+            <div  style="padding: 10px;padding-top: 0px;margin-top: 20px;background-color: rgba(247,247,247,0.94);" class="w3-code jsHigh notranslate">
+                
+<pre>
+    
+    if (typeof window.ethereum !== 'undefined') {
+        try{
+            ethereum.enable()
+            const web3 = new Web3(ethereum)
+            address=web3.eth.accounts[0];
+            var msg="welome to web3.js with metamask"
+            web3.eth.sign(address, web3.sha3(msg), function(error, hash) {
+                console.log(hash)
+            });
+        }
+        catch(error){
+            console.log(error)
+        }
+        
+    }
+    else{
+        console.log("web3 not detected");
+    }
+</pre>
+            </div>
+            <div class="d-flex d-xl-flex justify-content-end justify-content-xl-end" style="padding: 5px;margin-top: 20px;"><button class="btn btn-primary" type="button" style="padding: 3px;padding-right: 25px;padding-left: 25px;" onclick="signing_message()">Test</button></div>
+            <div style="padding: 10px;">
+                <!-- <p class="border rounded" style="background-color: rgba(247,247,247,0.94);padding: 10px;" id="signing_messageOp">Output</p> -->
+                <input type="text" class="border rounded" placeholder="output" disabled readonly style="width: 680px;height: 46px;padding: 10px;" id="signing_messageOp"/>
+            </div>
+        </div>
+
+        <!-- End:Signing message -->
+
+        <!-- start: Signing Message-->
+
+
+         <div style="margin-top: 60px;">
+            <h1 class="d-md-flex justify-content-md-start" style="font-size: 35px;font-family: 'Baloo Bhai', cursive;">Sending Transaction using metamask</h1>
+            <div class="d-sm-flex d-xl-flex justify-content-sm-start justify-content-xl-start">
+                <p class="border rounded" style="font-family: 'Baloo Bhai', cursive;background-color: #df1cff;padding: 2px;padding-right: 10px;padding-left: 10px;">web3.eth.sendTransaction()</p>
+            </div>
+            <div  style="padding: 10px;padding-top: 0px;margin-top: 20px;background-color: rgba(247,247,247,0.94);" class="w3-code jsHigh notranslate">
+                
+<pre>
+    
+    if (typeof window.ethereum !== 'undefined') {
+        try{
+            ethereum.enable()
+            const web3 = new Web3(ethereum)
+            address=web3.eth.accounts[0];
+            web3.eth.sendTransaction({
+                from: address,
+                gasPrice: "20000000000",
+                gas: "21000",
+                to: '0x0c3daA5406EFA051De189E66443C1bB96a93b4F9',
+                value: web3.toWei("0.1",'ether'),
+                data: ""
+            },function(err,res){
+                if(!err){
+                    console.log(res);
+                }
+                else{
+                    console.log(err);
+                }
+            });
+        }
+        catch(error){
+            console.log(error)
+        }
+        
+    }
+    else{
+        console.log("web3 not detected");
+    }
+</pre>
+            </div>
+            <div class="d-flex d-xl-flex justify-content-end justify-content-xl-end" style="padding: 5px;margin-top: 20px;"><button class="btn btn-primary" type="button" style="padding: 3px;padding-right: 25px;padding-left: 25px;" onclick="send_ether()">Test</button></div>
+            <div style="padding: 10px;">
+                <!-- <p class="border rounded" style="background-color: rgba(247,247,247,0.94);padding: 10px;" id="signing_messageOp">Output</p> -->
+                <input type="text" class="border rounded" placeholder="output" disabled readonly style="width: 680px;height: 46px;padding: 10px;" id="send_etherOp"/>
+            </div>
+        </div>
+
+        <!-- End:Signing message -->
+
+
+
+        
+        
+
+
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+    <script>w3CodeColor();</script>
+    <script>
+        function check(){
+            if (typeof window.ethereum !== 'undefined') {
+                checkOp.innerHTML = "web3 detected";
+            }
+            else{
+                checkOp.innerHTML = "web3 not detected";
+            }
+        }
+        
+        function enable(){
+            if (typeof window.ethereum !== 'undefined') {
+                try{
+                    ethereum.enable();
+                    enableOp.innerHTML = "Metamask enabled";
+                }
+                catch(err){
+                    enableOp.innerHTML = "err while enabeling Metamask";
+                }
+                
+            }
+            else{
+                enableOp.innerHTML = "web3 not detected";
+            }
+        }
+        
+        function ismetamask(){
+            if (typeof window.ethereum !== 'undefined') {
+                isMetamaskOp.innerHTML = ethereum.isMetaMask;
+            }
+            else{
+                isMetamaskOp.innerHTML = "web3 not detected";
+            }
+        }
+        
+        function current_account(){
+            if (typeof window.ethereum !== 'undefined') {
+                try{
+                    ethereum.enable()
+                        .then(function (accounts) {
+                            current_accountOp.innerHTML=accounts;
+                        })
+                        .catch(function (error) {
+                            current_accountOp.innerHTML=error;
+                        })
+                }
+                catch(err){
+                    current_accountOp.innerHTML=error;
+                }      
+
+            }
+            else{
+                networkOp.innerHTML = "web3 not detected";
+            }
+        }
+        
+        function network(){
+            if (typeof window.ethereum !== 'undefined') {
+                networkOp.innerHTML = ethereum.networkVersion;
+            }
+            else{
+                networkOp.innerHTML = "web3 not detected";
+            }
+        }
+
+        function get_balance(){
+            if (typeof window.ethereum !== 'undefined') {
+                ethereum.enable()
+                const web3 = new Web3(ethereum)
+                address=web3.eth.accounts[0];
+                web3.eth.getBalance(address, function(error, balance) {
+                    get_balanceOp.innerHTML=web3.fromWei(balance,'ether');
+                });
+                
+            }
+            else{
+                get_balanceOp.innerHTML = "web3 not detected";
+            }
+        }
+
+        function signing_message(){
+            if (typeof window.ethereum !== 'undefined') {
+                try{
+                    ethereum.enable()
+                    const web3 = new Web3(ethereum)
+                    address=web3.eth.accounts[0];
+                    var msg="welome to web3.js with metamask"
+                    web3.eth.sign(address, web3.sha3(msg), function(error, hash) {
+                        document.getElementById("signing_messageOp").placeholder=hash
+                    });
+                }
+                catch(error){
+                    document.getElementById("signing_messageOp").placeholder=error
+                }
+                
+            }
+            else{
+                document.getElementById("signing_messageOp").placeholder="web3 not detected";
+            }
+        }
+
+        function send_ether(){
+            if (typeof window.ethereum !== 'undefined') {
+                try{
+                    ethereum.enable()
+                    const web3 = new Web3(ethereum)
+                    address=web3.eth.accounts[0];
+                    web3.eth.sendTransaction({
+                        from: address,
+                        gasPrice: "20000000000",
+                        gas: "21000",
+                        to: '0x0c3daA5406EFA051De189E66443C1bB96a93b4F9',
+                        value: web3.toWei("0.1",'ether'),
+                        data: ""
+                    },function(err,res){
+                        if(!err){
+                            document.getElementById("send_etherOp").placeholder=res;
+                        }
+                        else{
+                            document.getElementById("send_etherOp").placeholder=err;
+                        }
+                    });
+                }
+                catch(error){
+                    document.getElementById("send_etherOp").placeholder=error
+                }
+                
+            }
+            else{
+                document.getElementById("send_etherOp").placeholder="web3 not detected";
+            }
+        }
+    </script>
+</body>
+
+</html>
